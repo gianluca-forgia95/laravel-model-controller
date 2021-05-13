@@ -7,9 +7,12 @@
     <title>Film</title>
 </head>
 <body>
-    <h1>Ciao</h1>
+   
     @foreach ($movies as $movie)
-     <h2>{{ $movie->title }}</h2>
+     <h2>Titolo: {{ $movie->title }}</h2>
+     <span>Genere: {{ $movie->genre }}</span>
+     <h3>Regista: {{ $movie->director }}</h3>
+     <p>Preview: {{ $movie->description }}</p>
         
     @endforeach
 </body>
