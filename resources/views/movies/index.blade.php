@@ -13,6 +13,7 @@
      <h2>Titolo: {{ $movie->title }}</h2>
      <span>Genere: {{ $movie->genre }}</span>
      <h3>Regia: {{ $movie->director }}</h3>
+     <button><a href="{{route('movies.show', [ 'movie' => $movie->id ])}}">Dettaglio film</a></button>
     @endforeach
 </body>
 </html>
