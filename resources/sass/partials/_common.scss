@@ -4,10 +4,14 @@
  box-sizing: border-box;
 }
 
-
-
+body {
+font-family: 'Bangers', cursive;
+}
+h1 {
+ text-align: center;
+ font-size: 80px;
+}
 .container {
- font-family: 'Bangers', cursive;
  width: 800px;
  margin: auto;
  display: flex;

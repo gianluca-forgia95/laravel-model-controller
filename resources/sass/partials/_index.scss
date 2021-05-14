@@ -4,19 +4,21 @@
  align-items: center;
  padding: 40px;
  text-align: center;
+ font-family: 'Lily Script One', cursive;
   button {
-      margin: auto;
-     max-width: 100px;
+     margin: auto;
+     width: 240px;
      padding:10px;
      margin-top: 15px;
      background-color: #f89200;
      border: 2px solid #000;
      border-radius: 10px;
+     font-size: 16px;
        a {
          color: #000;
          text-decoration: none;
          font-weight: bold;
-         font-family: 'Bangers', cursive;
+         font-family: 'Lily Script One', cursive;
        }
   }
   img {

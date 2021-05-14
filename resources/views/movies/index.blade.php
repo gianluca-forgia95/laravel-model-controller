@@ -12,6 +12,7 @@ Movie
 
 @section('content')
 
+<h1>My Movie Selection</h1>
  <div class="container">
    
     @foreach ($movies as $movie)
