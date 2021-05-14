@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     {{-- File CSS --}}
-     <link rel="stylesheet" href="{{ asset( 'css/app.css' )}}">
-     {{-- /File CSS --}}
-    <title>All Movies List</title>
-</head>
-<body>
+@extends('layouts.main')
+
+@section('title-page')
+Movie
+@endsection
+@section('font')
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bangers&family=Lily+Script+One&display=swap" rel="stylesheet">
+    
+@endsection
+
+@section('content')
 
  <div class="container">
    
@@ -25,8 +26,9 @@
  
 </div>
 
-</body>
-</html>
+@endsection
+
+
 
 
 

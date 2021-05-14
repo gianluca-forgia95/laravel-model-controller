@@ -4,11 +4,15 @@
  box-sizing: border-box;
 }
 
+
+
 .container {
+ font-family: 'Bangers', cursive;
  width: 800px;
  margin: auto;
  display: flex;
  flex-direction: column;
  justify-content: center;
-
+ background: rgb(188,34,195);
+ background: linear-gradient(0deg, rgba(188,34,195,1) 0%, rgba(253,45,45,1) 100%);
 }

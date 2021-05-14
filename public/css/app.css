@@ -5,11 +5,14 @@
 }
 
 .container {
+  font-family: "Bangers", cursive;
   width: 800px;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: #bc22c3;
+  background: linear-gradient(0deg, #bc22c3 0%, #fd2d2d 100%);
 }
 
 .box-movie {
@@ -32,9 +35,11 @@
   color: #000;
   text-decoration: none;
   font-weight: bold;
+  font-family: "Bangers", cursive;
 }
 .box-movie img {
   max-width: 400px;
+  padding: 30px 0;
 }
 
 .box-descr {
@@ -45,7 +50,8 @@
   font-size: 40px;
 }
 .box-descr p {
-  padding: 30px 0;
+  padding: 30px 80px;
+  line-height: 25px;
 }
 .box-descr button {
   width: 200px;
