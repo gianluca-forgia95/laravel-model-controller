@@ -32,12 +32,12 @@ h1 {
   font-family: "Lily Script One", cursive;
 }
 .box-movie button {
+  background-color: #f89200;
+  border: 2px solid #000;
   margin: auto;
   width: 240px;
   padding: 10px;
   margin-top: 15px;
-  background-color: #f89200;
-  border: 2px solid #000;
   border-radius: 10px;
   font-size: 16px;
 }
@@ -65,12 +65,12 @@ h1 {
   line-height: 25px;
 }
 .box-descr button {
-  width: 260px;
-  margin: auto;
-  padding: 30px;
-  background-color: #1ff910;
-  border-radius: 15px;
+  background-color: #f89200;
   border: 2px solid #000;
+  margin: auto;
+  width: 260px;
+  padding: 30px;
+  border-radius: 15px;
   font-size: 18px;
 }
 .box-descr button a {

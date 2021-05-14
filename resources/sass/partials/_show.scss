@@ -10,18 +10,13 @@
      line-height: 25px;
    }
    button {
+    @include buttons;
     width: 260px;
-    margin: auto;
     padding: 30px;
-    background-color: #1ff910;
     border-radius: 15px;
-    border: 2px solid #000;
     font-size: 18px;
       a {
-         color: #000;
-         text-decoration: none;
-         font-weight: bold;
-         font-family: 'Lily Script One', cursive;
+         @include styleLink;
       }
    }
 }
