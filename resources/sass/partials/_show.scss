@@ -1,0 +1,23 @@
+.box-descr {
+ text-align: center;
+   h2 {
+     line-height: 120px;
+     font-size: 40px;
+   }
+   p {
+     padding: 30px 0;
+   }
+   button {
+    width: 200px;
+    margin: auto;
+    padding: 30px;
+    background-color: #1ff910;
+    border-radius: 15px;
+    border: 2px solid #000;
+      a {
+         color: #000;
+         text-decoration: none;
+         font-weight: bold;
+      }
+   }
+}

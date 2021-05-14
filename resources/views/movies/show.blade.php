@@ -11,9 +11,11 @@
 </head>
 <body>
     <div class="container">
+      <div class="box-descr">
         <h2>{{ $movie->title }}</h2>
         <p>{{ $movie->description }}</p>
         <button><a href="{{route('movies.index')}}">Back To HomePage</a></button>
+     </div>
     </div>
     
 </body>

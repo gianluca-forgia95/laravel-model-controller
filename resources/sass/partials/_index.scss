@@ -4,7 +4,17 @@
  padding: 40px;
  text-align: center;
   button {
+      margin: auto;
      max-width: 100px;
      padding:10px;
+     margin-top: 15px;
+     background-color: #f89200;
+     border: 2px solid #000;
+     border-radius: 10px;
+       a {
+         color: #000;
+         text-decoration: none;
+         font-weight: bold;
+       }
   }
 }

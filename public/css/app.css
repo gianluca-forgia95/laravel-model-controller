@@ -11,10 +11,6 @@
   flex-direction: column;
   justify-content: center;
 }
-.container button {
-  width: 200px;
-  margin: auto;
-}
 
 .box-movie {
   display: flex;
@@ -23,6 +19,40 @@
   text-align: center;
 }
 .box-movie button {
+  margin: auto;
   max-width: 100px;
   padding: 10px;
+  margin-top: 15px;
+  background-color: #f89200;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.box-movie button a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.box-descr {
+  text-align: center;
+}
+.box-descr h2 {
+  line-height: 120px;
+  font-size: 40px;
+}
+.box-descr p {
+  padding: 30px 0;
+}
+.box-descr button {
+  width: 200px;
+  margin: auto;
+  padding: 30px;
+  background-color: #1ff910;
+  border-radius: 15px;
+  border: 2px solid #000;
+}
+.box-descr button a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
 }
