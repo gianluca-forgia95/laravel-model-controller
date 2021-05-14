@@ -20,6 +20,7 @@ class CreateMoviesTable extends Migration
             $table->text('description');
             $table->string('genre', 50);
             $table->string('director', 50);
+            $table->string('actors');
         });
     }
 
