@@ -15,6 +15,7 @@
 .box-movie {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 40px;
   text-align: center;
 }
@@ -31,6 +32,9 @@
   color: #000;
   text-decoration: none;
   font-weight: bold;
+}
+.box-movie img {
+  max-width: 400px;
 }
 
 .box-descr {

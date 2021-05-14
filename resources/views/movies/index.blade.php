@@ -15,6 +15,7 @@
    
     @foreach ($movies as $movie)
     <div class="box-movie">
+    <img src="{{ $movie->img }}" alt="{{ $movie->title }}">
      <h2>Titolo: {{ $movie->title }}</h2>
      <span>Genere: {{ $movie->genre }}</span>
      <h3>Regia: {{ $movie->director }}</h3>
