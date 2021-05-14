@@ -1,0 +1,10 @@
+.box-movie {
+ display: flex;
+ flex-direction: column;
+ padding: 40px;
+ text-align: center;
+  button {
+     max-width: 100px;
+     padding:10px;
+  }
+}

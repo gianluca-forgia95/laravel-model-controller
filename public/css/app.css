@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container button {
+  width: 200px;
+  margin: auto;
+}
+
+.box-movie {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  text-align: center;
+}
+.box-movie button {
+  max-width: 100px;
+  padding: 10px;
+}
