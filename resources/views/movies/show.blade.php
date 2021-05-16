@@ -6,7 +6,7 @@ Movie
 
 @section('font')
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bangers&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bangers&family=Lily+Script+One&display=swap" rel="stylesheet">
 @endsection
 @section('content')
 

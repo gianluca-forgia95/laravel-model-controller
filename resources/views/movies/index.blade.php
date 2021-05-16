@@ -21,6 +21,7 @@ Movie
      <h2>Titolo: {{ $movie->title }}</h2>
      <span>Genere: {{ $movie->genre }}</span>
      <h3>Regia: {{ $movie->director }}</h3>
+     <span>Anno: {{ $movie->year }}</span>
      <button><a href="{{route('movies.show', [ 'movie' => $movie->id ])}}">Preview</a></button>
     </div>
     @endforeach
