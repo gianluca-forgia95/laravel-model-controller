@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title-page')
-Movie
+{{ $movie->title }}
 @endsection
 
 @section('font')
@@ -11,11 +11,13 @@ Movie
 @section('content')
 
 <div class="container">
-    <div class="box-descr">
+{{-- Film Description --}}
+   <div class="box-descr">
       <h2>{{ $movie->title }}</h2>
       <p>{{ $movie->description }}</p>
       <button><a href="{{route('movies.index')}}">Back To HomePage</a></button>
    </div>
+{{-- Film Description --}}
 </div>
 
 @endsection

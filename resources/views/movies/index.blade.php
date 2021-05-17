@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title-page')
-Movie
+All Movies
 @endsection
 @section('font')
 
@@ -13,19 +13,22 @@ Movie
 @section('content')
 
 <h1>My Movie Selection</h1>
+<div class="text-center mt-3">
+  <a href="{{ route('movies.create')}}"><button type="button" class="btn btn-success">Add Movie</button></a>
+</div>
  <div class="container">
-   
-    @foreach ($movies as $movie)
-    <div class="box-movie">
-    <img src="{{ $movie->img }}" alt="{{ $movie->title }}">
+{{-- Movie Box --}}
+@foreach ($movies as $movie)
+<div class="box-movie">
+     <img src="{{ $movie->img }}" alt="{{ $movie->title }}">
      <h2>Titolo: {{ $movie->title }}</h2>
      <span>Genere: {{ $movie->genre }}</span>
      <h3>Regia: {{ $movie->director }}</h3>
      <span>Anno: {{ $movie->year }}</span>
      <button><a href="{{route('movies.show', [ 'movie' => $movie->id ])}}">Preview</a></button>
-    </div>
-    @endforeach
- 
+</div>
+@endforeach
+{{-- /Movie Box --}}
 </div>
 
 @endsection
