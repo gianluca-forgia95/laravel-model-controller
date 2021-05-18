@@ -26,10 +26,23 @@ All Movies
      <h3>Regia: {{ $movie->director }}</h3>
      <span>Anno: {{ $movie->year }}</span>
      <button><a href="{{route('movies.show', [ 'movie' => $movie->id ])}}">Preview</a></button>
+     {{-- Destroy Btn --}}
+     <form action="{{route('movies.destroy', [ 'movie' => $movie->id ])}}" method="POST">
+       @csrf
+       @method('DELETE')
+       <button type="submit" class="btn btn-danger">Remove Movie</button>
+     </form>
+     {{-- /Destroy Btn --}}
 </div>
 @endforeach
 {{-- /Movie Box --}}
 </div>
+
+@if (session('message'))
+    <div class="alert alert-success destroy-complete">
+        {{ session('message') }}
+    </div>
+@endif
 
 @endsection
 

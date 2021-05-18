@@ -46,17 +46,18 @@ class MovieController extends Controller
             'description' => 'required|string',
             'year' => 'required|numeric|min:1900|max:' .$year,
             ]);
-        $data = $request->all();
-        //Save
-        $movieNew = new Movie;
-        $movieNew->title = $data['title'];
-        $movieNew->director = $data['director'];
-        $movieNew->genre = $data['genre'];
-        $movieNew->description = $data['description'];
-        $movieNew->year = $data['year'];
-        $movieNew->img = $data['img'];
+        $movieNew = Movie::create($request->all());
+        // $data = $request->all();
+        // //Save
+        // $movieNew = new Movie;
+        // $movieNew->title = $data['title'];
+        // $movieNew->director = $data['director'];
+        // $movieNew->genre = $data['genre'];
+        // $movieNew->description = $data['description'];
+        // $movieNew->year = $data['year'];
+        // $movieNew->img = $data['img'];
         //Store
-        $movieNew->save();
+        // $movieNew->save();
         //Redirect
         return redirect()->route('movies.show', $movieNew);
     }
@@ -78,7 +79,7 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Movie $movie)
     {
         //
     }
@@ -101,9 +102,11 @@ class MovieController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Movie $movie)
     {
-        //
+        $movie->delete();
+
+        return redirect()->route('movies.index')->with('message', 'Il Film è stato eliminato');
     }
 }
 

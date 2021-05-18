@@ -8,24 +8,24 @@ Add Movie
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Bangers&family=Lily+Script+One&display=swap" rel="stylesheet">
 @endsection
-@section('content')
 
-<h1>Aggiungi un Film</h1>
-@if ($errors->any())
-<div class="alert alert-danger">
-<ul>
-@foreach ($errors->all() as $error)
-<li>{{ $error }}</li>
-@endforeach
-</ul>
-</div>
-@endif
+@section('content')
+   <h1>Aggiungi un Film</h1>
+   @if ($errors->any())
+   <div class="alert alert-danger">
+    <ul>
+      @foreach ($errors->all() as $error)
+       <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+  @endif
 
 <div class="container">
 <form action="{{ route('movies.store')}}" method="POST">
-    @csrf
-
     @method('POST')
+
+    @csrf
     <div class="form-group">
      <label for="title">Titolo</label>
       <input type="text" class="form-control" id="title" name="title" placeholder="Enter Movie Title">
