@@ -19,4 +19,17 @@ h1 {
  justify-content: center;
  background: rgb(188,34,195);
  background: linear-gradient(0deg, rgba(188,34,195,1) 0%, rgba(253,45,45,1) 100%);
+  form {
+      font-family: $font-family-sans-serif ;
+       label {
+         font-weight: bold;
+         font-size: 22px;
+       }
+  }
+}
+
+.edit-image {
+ max-width: 150px;
+ max-height: 180px;
+ padding: 10px;
 }

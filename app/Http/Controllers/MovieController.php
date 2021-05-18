@@ -16,10 +16,10 @@ class MovieController extends Controller
 
         $this->requestValidation = [
             'title' => 'required|string|max:100',
-            'film_director' => 'required|string|max:50',
-            'genres' => 'required|string|max:50',
-            'plot' => 'required|string',
-            'year' => 'required|numeric|min:1900|max:'.$year
+            'director' => 'required|string|max:50',
+            'genre' => 'required|string|max:50',
+            'description' => 'required|string',
+            'year' => 'required|numeric|min:1900|max:'. $year
         ];
     }
     /**
@@ -118,7 +118,7 @@ class MovieController extends Controller
     {
         $movie->delete();
 
-        return redirect()->route('movies.index')->with('message', 'Il Film è stato eliminato');
+        return redirect()->route('movies.index')->with('message', $movie->title .'è stato eliminato');
     }
 }
 

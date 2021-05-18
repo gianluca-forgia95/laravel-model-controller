@@ -15,7 +15,7 @@
    <div class="box-descr">
       <h2>{{ $movie->title }}</h2>
       <p>{{ $movie->description }}</p>
-      <button><a href="{{route('movies.index')}}">Back To HomePage</a></button>
+      <button class="btn btn-primary"><a href="{{route('movies.index')}}">Back To HomePage</a></button>
    </div>
 {{-- Film Description --}}
 </div>

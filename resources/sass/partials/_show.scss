@@ -1,6 +1,5 @@
 .box-descr {
  text-align: center;
- height: 100vh;
    h2 {
      line-height: 120px;
      font-size: 40px;
@@ -10,13 +9,15 @@
      line-height: 25px;
    }
    button {
-    @include buttons;
     width: 260px;
     padding: 30px;
     border-radius: 15px;
     font-size: 18px;
-      a {
-         @include styleLink;
-      }
+    margin-bottom: 40px;
+     a {
+       font-family: $font-family-sans-serif;
+       color: black;
+       font-weight: bold;
+     }
    }
 }

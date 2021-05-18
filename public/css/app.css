@@ -10026,6 +10026,19 @@ h1 {
   background: #bc22c3;
   background: linear-gradient(0deg, #bc22c3 0%, #fd2d2d 100%);
 }
+.container form {
+  font-family: "Nunito", sans-serif;
+}
+.container form label {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.edit-image {
+  max-width: 150px;
+  max-height: 180px;
+  padding: 10px;
+}
 
 .box-movie {
   display: flex;
@@ -10036,9 +10049,6 @@ h1 {
   font-family: "Lily Script One", cursive;
 }
 .box-movie button {
-  background-color: #f89200;
-  border: 2px solid #000;
-  margin: auto;
   width: 240px;
   padding: 10px;
   margin-top: 15px;
@@ -10049,16 +10059,25 @@ h1 {
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  font-family: "Lily Script One", cursive;
+  font-family: "Nunito", sans-serif;
 }
 .box-movie img {
   max-width: 400px;
   padding: 30px 0;
 }
 
+.link-create button {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.dng button {
+  border: 2px solid #000;
+  color: #000;
+}
+
 .box-descr {
   text-align: center;
-  height: 100vh;
 }
 .box-descr h2 {
   line-height: 120px;
@@ -10069,17 +10088,14 @@ h1 {
   line-height: 25px;
 }
 .box-descr button {
-  background-color: #f89200;
-  border: 2px solid #000;
-  margin: auto;
   width: 260px;
   padding: 30px;
   border-radius: 15px;
   font-size: 18px;
+  margin-bottom: 40px;
 }
 .box-descr button a {
-  color: #000;
-  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  color: black;
   font-weight: bold;
-  font-family: "Lily Script One", cursive;
 }

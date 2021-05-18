@@ -6,7 +6,6 @@
  text-align: center;
  font-family: 'Lily Script One', cursive;
   button {
-     @include buttons;
      width: 240px;
      padding:10px;
      margin-top: 15px;
@@ -16,7 +15,7 @@
          color: #000;
          text-decoration: none;
          font-weight: bold;
-         font-family: 'Lily Script One', cursive;
+         font-family: $font-family-sans-serif;
        }
   }
   img {
@@ -24,8 +23,16 @@
      padding: 30px 0;
   }
 }
+.link-create {
+ button {
+   width: 200px;
+   margin-bottom: 10px;
+ }
+}
 
-// .destroy-complete {
-//  position: absolute;
-//  top: 40px;
-// }
+.dng {
+ button {
+   border: 2px solid #000;
+   color: #000;
+ }
+}
