@@ -60,7 +60,7 @@ Edit Movie: {{$movie->title}}
         <div class="form-group">
             <select class="form-control" id="year" name="year">
                 @for ($i = 1900; $i < date("Y") + 1; $i++)
-                <option value="{{$i}}" {{ $i == $movie->year ? 'selected' : '' }}>{{$i}}</option>
+                <option value="{{$i}}" {{ old('year') == $i || $movie->year == $i ? 'selected' : '' }}>{{$i}}</option>
                 @endfor
             </select>
         </div>
