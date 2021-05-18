@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title-page')
-Add Movie
+Edit Movie: {{$movie->title}}
 @endsection
 
 @section('font')
@@ -22,35 +22,34 @@ Add Movie
   @endif
 
 <div class="container">
-    <form action="{{ route('movies.store')}}" method="POST">
-        @method('POST')
-    
+    <form action="{{route('movies.update', ['movie' => $movie->id])}}" method="POST">
+        @method('PUT')
         @csrf
         <div class="form-group">
          <label for="title">Titolo</label>
-          <input type="text" class="form-control" id="title" name="title" placeholder="Enter Movie Title">
+          <input type="text" class="form-control" id="title" name="title" placeholder="Enter Movie Title" value="{{ $movie->title}}">
         </div>
         <div class="form-group">
             <label for="img">Url Img</label>
-             <input type="text" class="form-control" id="img" name="img" placeholder="Enter Url Img">
+             <input type="text" class="form-control" id="img" name="img" placeholder="Enter Url Img" value="{{ $movie->img}}">
         </div>
         
         <div class="form-group">
             <label for="director">Regista</label>
-            <input type="text" class="form-control" id="director" name="director" placeholder="Enter Movie Director">
+            <input type="text" class="form-control" id="director" name="director" placeholder="Enter Movie Director" value="{{ $movie->director}}">
         </div>
         <div class="form-group">
             <label for="genre">Generi</label>
-            <input type="text" class="form-control" id="genre" name="genre" placeholder="Enter Genre/Genres">
+            <input type="text" class="form-control" id="genre" name="genre" placeholder="Enter Genre/Genres" value="{{ $movie->genre}}">
         </div>
         <div class="form-group">
             <label for="description">Trama</label>
-            <textarea class="form-control" id="description" name="description" rows="8"></textarea>
+            <textarea class="form-control" id="description" name="description" rows="8">{{ $movie->description}}</textarea>
         </div>
         <div class="form-group">
             <select class="form-control" id="year" name="year">
                 @for ($i = 1900; $i < date("Y") + 1; $i++)
-                <option value="{{ $i }}">{{ $i }}</option>
+                <option value="{{$i}}" {{ $i == $movie->year ? 'selected' : '' }}>{{$i}}</option>
                 @endfor
             </select>
         </div>
