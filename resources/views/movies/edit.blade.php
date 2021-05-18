@@ -27,24 +27,24 @@ Edit Movie: {{$movie->title}}
         @csrf
         <div class="form-group">
          <label for="title">Titolo</label>
-          <input type="text" class="form-control" id="title" name="title" placeholder="Enter Movie Title" value="{{ $movie->title}}">
+          <input type="text" class="form-control" id="title" name="title" placeholder="Enter Movie Title" value="{{ old('title') ? old('title') : $movie->title}}">
         </div>
         <div class="form-group">
             <label for="img">Url Img</label>
-             <input type="text" class="form-control" id="img" name="img" placeholder="Enter Url Img" value="{{ $movie->img}}">
+             <input type="text" class="form-control" id="img" name="img" placeholder="Enter Url Img" value="{{ old('img') ? old('img') : $movie->img}}">
         </div>
         
         <div class="form-group">
             <label for="director">Regista</label>
-            <input type="text" class="form-control" id="director" name="director" placeholder="Enter Movie Director" value="{{ $movie->director}}">
+            <input type="text" class="form-control" id="director" name="director" placeholder="Enter Movie Director" value="{{ old('director') ? old('director') : $movie->director}}">
         </div>
         <div class="form-group">
             <label for="genre">Generi</label>
-            <input type="text" class="form-control" id="genre" name="genre" placeholder="Enter Genre/Genres" value="{{ $movie->genre}}">
+            <input type="text" class="form-control" id="genre" name="genre" placeholder="Enter Genre/Genres" value="{{ old('genre') ? old('genre') : $movie->genre}}">
         </div>
         <div class="form-group">
             <label for="description">Trama</label>
-            <textarea class="form-control" id="description" name="description" rows="8">{{ $movie->description}}</textarea>
+            <textarea class="form-control" id="description" name="description" rows="8">{{ old('description') ? old('description') : $movie->description}}</textarea>
         </div>
         <div class="form-group">
             <select class="form-control" id="year" name="year">

@@ -8,6 +8,20 @@ use App\Movie;
 
 class MovieController extends Controller
 {
+    protected $requestValidation = [];
+
+    public function __construct()
+    {
+        $year = date("Y") + 1;
+
+        $this->requestValidation = [
+            'title' => 'required|string|max:100',
+            'film_director' => 'required|string|max:50',
+            'genres' => 'required|string|max:50',
+            'plot' => 'required|string',
+            'year' => 'required|numeric|min:1900|max:'.$year
+        ];
+    }
     /**
      * Display a listing of the resource.
      *
@@ -37,29 +51,16 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        $year = date("Y") + 1 ;
+        $data = $request->all();
+
+        if ( $data['img'] === NULL ) {
+            unset($data['img']);
+        }
         //Validation
-        $request->validate([
-            'title' => 'required|string|max:100',
-            'director' => 'required|string|max:50',
-            'genre' => 'required|string|max:50',
-            'description' => 'required|string',
-            'year' => 'required|numeric|min:1900|max:' .$year,
-            ]);
-        $movieNew = Movie::create($request->all());
-        // $data = $request->all();
-        // //Save
-        // $movieNew = new Movie;
-        // $movieNew->title = $data['title'];
-        // $movieNew->director = $data['director'];
-        // $movieNew->genre = $data['genre'];
-        // $movieNew->description = $data['description'];
-        // $movieNew->year = $data['year'];
-        // $movieNew->img = $data['img'];
-        //Store
-        // $movieNew->save();
-        //Redirect
-        return redirect()->route('movies.show', $movieNew);
+        $request->validate($this->requestValidation);
+        $movieNew = Movie::create($data);
+
+        return redirect()->route('movies.show', $movieNew)->with('message', $movieNew->title . 'è stato aggiunto con successo');
     }
 
     /**
@@ -93,16 +94,14 @@ class MovieController extends Controller
      */
     public function update(Request $request, Movie $movie)
     {
-        $year = date("Y") + 1 ;
-        //Validation
-        $request->validate([
-            'title' => 'required|string|max:100',
-            'director' => 'required|string|max:50',
-            'genre' => 'required|string|max:50',
-            'description' => 'required|string',
-            'year' => 'required|numeric|min:1900|max:' .$year,
-            ]);
         $data = $request->all();
+
+        if ( $data['img'] === NULL ) {
+            unset($data['img']);
+        }
+        //Validation
+        $request->validate($this->requestValidation);
+
 
         $movie->update($data);
 

@@ -16,6 +16,11 @@ All Movies
 <div class="text-center mt-3">
   <a href="{{ route('movies.create')}}"><button type="button" class="btn btn-success">Add Movie</button></a>
 </div>
+@if (session('message'))
+    <div class="alert alert-success destroy-complete">
+        {{ session('message') }}
+    </div>
+@endif
  <div class="container">
 {{-- Movie Box --}}
 @foreach ($movies as $movie)
@@ -39,11 +44,7 @@ All Movies
 {{-- /Movie Box --}}
 </div>
 
-@if (session('message'))
-    <div class="alert alert-success destroy-complete">
-        {{ session('message') }}
-    </div>
-@endif
+
 
 @endsection
 
