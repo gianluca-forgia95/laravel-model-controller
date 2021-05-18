@@ -26,6 +26,7 @@ All Movies
      <h3>Regia: {{ $movie->director }}</h3>
      <span>Anno: {{ $movie->year }}</span>
      <button><a href="{{route('movies.show', [ 'movie' => $movie->id ])}}">Preview</a></button>
+     <button><a href="{{route('movies.edit', [ 'movie' => $movie->id ])}}">Edit</a></button>
      {{-- Destroy Btn --}}
      <form action="{{route('movies.destroy', [ 'movie' => $movie->id ])}}" method="POST">
        @csrf
