@@ -15,4 +15,10 @@ class MovieController extends Controller
         return response()->json($movies);
     }
 
+    public function show(Movie $movie) 
+    {
+        return response()->json($movie);
+     
+    }
+
 }
