@@ -18,11 +18,13 @@
    </div>
 @endif
 {{-- /Alert Film salvato --}}
+{{-- Alert film modificato --}}
 @if (session('edit'))
    <div class="alert alert-success">
        {{ session('edit') }}
    </div>
 @endif
+{{-- /Alert film modificato --}}
 {{-- Film Description --}}
    <div class="box-descr">
       <h2>{{ $movie->title }}</h2>
