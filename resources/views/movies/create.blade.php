@@ -10,7 +10,10 @@ Add Movie
 @endsection
 
 @section('content')
+{{-- Titolo Pagina --}}
    <h1>Aggiungi un Film</h1>
+{{-- /Titolo Pagina --}}
+{{-- Error Alert --}}
    @if ($errors->any())
    <div class="alert alert-danger">
     <ul>
@@ -20,7 +23,7 @@ Add Movie
     </ul>
   </div>
   @endif
-
+{{-- /sError Alert --}}
 <div class="container">
 <form action="{{ route('movies.store')}}" method="POST">
     @method('POST')

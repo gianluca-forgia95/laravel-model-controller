@@ -60,7 +60,7 @@ class MovieController extends Controller
         $request->validate($this->requestValidation);
         $movieNew = Movie::create($data);
 
-        return redirect()->route('movies.show', $movieNew)->with('message', $movieNew->title . 'è stato aggiunto con successo');
+        return redirect()->route('movies.show', $movieNew)->with('success', $movieNew->title . ' è stato aggiunto con successo');
     }
 
     /**
@@ -105,7 +105,7 @@ class MovieController extends Controller
 
         $movie->update($data);
 
-        return redirect()->route('movies.show', $movie);
+        return redirect()->route('movies.show', $movie)->with('edit', $movie->title .' è stato modificato');
     }
 
     /**
@@ -118,7 +118,7 @@ class MovieController extends Controller
     {
         $movie->delete();
 
-        return redirect()->route('movies.index')->with('message', $movie->title .'è stato eliminato');
+        return redirect()->route('movies.index')->with('message', $movie->title .' è stato eliminato');
     }
 }
 

@@ -10,7 +10,10 @@ Edit Movie: {{$movie->title}}
 @endsection
 
 @section('content')
+{{-- Titolo Pagina --}}
 <h1>Modifica un Film</h1>
+{{-- /Titolo Pagina --}}
+{{-- Error Alert --}}
    @if ($errors->any())
    <div class="alert alert-danger">
     <ul>
@@ -20,7 +23,7 @@ Edit Movie: {{$movie->title}}
     </ul>
   </div>
   @endif
-
+{{-- /Error Alert --}}
 <div class="container">
     <form action="{{route('movies.update', ['movie' => $movie->id])}}" method="POST">
         @method('PUT')

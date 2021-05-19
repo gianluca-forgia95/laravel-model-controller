@@ -11,16 +11,20 @@ All Movies
 @endsection
 
 @section('content')
-
+{{-- Titolo Pagina --}}
 <h1>My Movie Selection</h1>
+{{-- /Titolo Pagina --}}
 <div class="link-create text-center mt-3">
   <a href="{{ route('movies.create')}}"><button type="button" class="btn btn-success">Add Movie</button></a>
 </div>
+{{-- Alert Film cancellato --}}
 @if (session('message'))
     <div class="alert alert-success destroy-complete">
         {{ session('message') }}
     </div>
 @endif
+{{-- /Alert Film cancellato --}}
+
  <div class="container">
 {{-- Movie Box --}}
 @foreach ($movies as $movie)

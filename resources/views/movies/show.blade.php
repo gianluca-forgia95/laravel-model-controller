@@ -11,6 +11,18 @@
 @section('content')
 
 <div class="container">
+{{-- Alert Film salvato --}}
+@if (session('success'))
+   <div class="alert alert-success">
+       {{ session('success') }}
+   </div>
+@endif
+{{-- /Alert Film salvato --}}
+@if (session('edit'))
+   <div class="alert alert-success">
+       {{ session('edit') }}
+   </div>
+@endif
 {{-- Film Description --}}
    <div class="box-descr">
       <h2>{{ $movie->title }}</h2>
